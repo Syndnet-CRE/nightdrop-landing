@@ -5,7 +5,8 @@ import type React from "react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
-import Link from "next/link" // Import Link for client-side navigation
+import Image from "next/image"
+import Link from "next/link"
 
 export function Header() {
   const navItems = [
@@ -25,24 +26,22 @@ export function Header() {
 
   return (
     <header className="w-full py-4 px-6">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-3">
-            <span className="text-foreground text-xl font-semibold">Deal Feed</span>
-          </div>
-          <nav className="hidden md:flex items-center gap-2">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={(e) => handleScroll(e, item.href)} // Add onClick handler
-                className="text-[#888888] hover:text-foreground px-4 py-2 rounded-full font-medium transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
+      <div className="max-w-7xl mx-auto flex items-center justify-between relative">
+        <div className="flex items-center">
+          <Image src="/logos/nightdrop-logo.png" alt="Nightdrop" width={193} height={71} priority />
         </div>
+        <nav className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              onClick={(e) => handleScroll(e, item.href)}
+              className="text-[#cccccc] hover:text-foreground px-3 py-1.5 rounded-full text-[14px] font-medium transition-colors"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
         <div className="flex items-center gap-3">
           <Link href="/login" className="hidden md:block">
             <Button variant="outline" className="px-5 py-2 rounded-full font-medium text-sm">
