@@ -11,6 +11,7 @@ interface Step {
   endMin: number
   milestone?: boolean
   Icon?: LucideIcon
+  accent?: "primary" | "orange"
 }
 
 const TOTAL_MINUTES = 361
@@ -25,6 +26,7 @@ const steps: Step[] = [
     endMin: 0,
     milestone: true,
     Icon: Lock,
+    accent: "orange",
   },
   {
     idx: 2,
@@ -156,14 +158,15 @@ export function MidnightRunSection() {
                   {/* Bar or milestone */}
                   {step.milestone && step.Icon ? (
                     <div
-                      className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 mt-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center shadow-[0_0_0_4px_rgba(91,204,72,0.18)]"
+                      className={`absolute top-1/2 -translate-x-1/2 -translate-y-1/2 mt-1 w-6 h-6 rounded-full flex items-center justify-center ${
+                        step.accent === "orange"
+                          ? "bg-orange-500 shadow-[0_0_0_4px_rgba(249,115,22,0.20)]"
+                          : "bg-primary shadow-[0_0_0_4px_rgba(91,204,72,0.18)]"
+                      }`}
                       style={{ left: pct(step.startMin) }}
                       aria-hidden="true"
                     >
-                      <step.Icon
-                        className="w-3.5 h-3.5 text-primary-foreground"
-                        strokeWidth={2.5}
-                      />
+                      <step.Icon className="w-3.5 h-3.5 text-white" strokeWidth={2.5} />
                     </div>
                   ) : (
                     <div
@@ -212,13 +215,12 @@ export function MidnightRunSection() {
               >
                 {step.milestone && step.Icon ? (
                   <div
-                    className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-primary flex items-center justify-center"
+                    className={`absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full flex items-center justify-center ${
+                      step.accent === "orange" ? "bg-orange-500" : "bg-primary"
+                    }`}
                     style={{ left: pct(step.startMin) }}
                   >
-                    <step.Icon
-                      className="w-3 h-3 text-primary-foreground"
-                      strokeWidth={2.5}
-                    />
+                    <step.Icon className="w-3 h-3 text-white" strokeWidth={2.5} />
                   </div>
                 ) : (
                   <div
