@@ -442,7 +442,7 @@ export function HeroSection() {
         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 ring-1 ring-white/10 text-foreground/80 text-xs md:text-sm font-medium uppercase tracking-wide">
           We run agents every night · Nationwide
         </span>
-        <h1 className="text-foreground text-4xl md:text-5xl lg:text-7xl font-semibold leading-[1.05] tracking-tight">
+        <h1 className="text-foreground text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold leading-[1.15] md:leading-[1.05] tracking-tight">
           Automate your acquisition pipeline.
         </h1>
         <p className="text-muted-foreground text-base md:text-lg lg:text-xl font-medium leading-relaxed max-w-xl mx-auto">
@@ -450,7 +450,7 @@ export function HeroSection() {
         </p>
       </div>
 
-      <div className="relative z-10 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+      <div className="relative z-10 flex flex-col md:flex-row items-center gap-3 md:gap-4 w-full max-w-md md:max-w-none px-4">
         <Link href={SIGNUP_URL}>
           <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-7 py-3 rounded-full font-medium text-base shadow-lg ring-1 ring-white/10">
             Submit your buy box before midnight →

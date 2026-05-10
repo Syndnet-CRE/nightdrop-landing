@@ -94,7 +94,7 @@ export function PricingSection() {
           </p>
         </div>
       </div>
-      <div className="self-stretch px-5 flex flex-col md:flex-row justify-start items-stretch gap-4 md:gap-6 mt-8 max-w-[1100px] mx-auto">
+      <div className="self-stretch px-5 flex flex-col lg:flex-row justify-start items-stretch gap-4 lg:gap-6 mt-8 max-w-[1100px] mx-auto">
         {pricingPlans.map((plan) => (
           <div
             key={plan.name}
