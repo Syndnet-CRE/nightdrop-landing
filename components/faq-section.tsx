@@ -13,7 +13,7 @@ const faqData = [
   {
     question: "Where does the data come from?",
     answer:
-      "ATTOM property data via Snowflake. 160 million parcels, 150+ billion data points, approximately 900 data points per property — including geospatial, demographic, ownership, transaction, and assessment data.",
+      "ATTOM property data via Snowflake. 160 million parcels, 150+ billion data points, approximately 900 data points per property, including geospatial, demographic, ownership, transaction, and assessment data.",
   },
   {
     question: "How fresh is the data?",
@@ -28,7 +28,7 @@ const faqData = [
   {
     question: "How do I get owner contact info?",
     answer:
-      "Every deal brief includes the best available contact sourced via skip trace — name, phone, and email with confidence percentages attached to each. You verify before you dial.",
+      "Every deal brief includes the best available contact sourced via skip trace, with name, phone, and email and confidence percentages attached to each. You verify before you dial.",
   },
   {
     question: "Is there a contract?",

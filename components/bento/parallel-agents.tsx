@@ -1,252 +1,135 @@
+"use client"
+
 import type React from "react"
 
-interface ParallelCodingAgentsProps {
-  className?: string
-}
-
-const ParallelCodingAgents: React.FC<ParallelCodingAgentsProps> = ({ className = "" }) => {
-  // Theme-based CSS variables using global theme
-  const themeVars = {
-    "--pca-background-color": "hsl(var(--background))",
-    "--pca-background-glass": "hsl(var(--card) / 0.2)",
-    "--pca-background-gradient-start": "hsl(var(--card) / 0.2)",
-    "--pca-background-gradient-end": "transparent",
-    "--pca-text-primary": "hsl(var(--foreground))",
-    "--pca-text-secondary": "hsl(var(--muted-foreground))",
-    "--pca-border-color": "hsl(var(--border))",
-    "--pca-border-main": "hsl(var(--border))",
-    "--pca-shadow-color": "rgba(0, 0, 0, 0.12)", // Keeping as is, common shadow
-    "--pca-container-background": "hsl(var(--card) / 0.4)",
-    "--pca-container-gradient-start": "hsl(var(--card) / 0.4)",
-    "--pca-container-gradient-end": "transparent",
-  }
-
-  const CheckmarkIcon = () => (
-    <svg
-      width="13.885"
-      height="13.885"
-      viewBox="0 0 14 14"
-      fill="none"
-      style={{ width: "13.885px", height: "13.885px" }}
-    >
-      <path
-        d="M3.85156 7.875L6.47656 10.5L10.8516 3.5"
-        stroke="var(--pca-text-primary)"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.5"
-        opacity="0.8"
-      />
-    </svg>
-  )
-
-  const RefreshIcon = () => (
-    <svg
-      width="13.885"
-      height="13.885"
-      viewBox="0 0 14 14"
-      fill="none"
-      style={{ width: "13.885px", height: "13.885px" }}
-    >
-      <path
-        d="M1.75 7C1.75 4.1005 4.1005 1.75 7 1.75C9.8995 1.75 12.25 4.1005 12.25 7C12.25 9.8995 9.8995 12.25 7 12.25"
-        stroke="var(--pca-text-primary)"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.5"
-        opacity="0.8"
-      />
-      <path
-        d="M4.375 10.5L1.75 12.25L3.5 9.625"
-        stroke="var(--pca-text-primary)"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.5"
-        opacity="0.8"
-      />
-    </svg>
-  )
-
-  const SparklesIcon = () => (
-    <svg
-      width="13.885"
-      height="13.885"
-      viewBox="0 0 14 14"
-      fill="none"
-      style={{ width: "13.885px", height: "13.885px" }}
-    >
-      <path
-        d="M7 1.75L8.225 5.775L12.25 7L8.225 8.225L7 12.25L5.775 8.225L1.75 7L5.775 5.775L7 1.75Z"
-        stroke="var(--pca-text-primary)"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.5"
-        opacity="0.8"
-      />
-    </svg>
-  )
-
-  const agents = [
+const ParallelCodingAgents: React.FC = () => {
+  const contacts = [
     {
-      icon: <CheckmarkIcon />,
-      title: "Update buttons",
-      tokens: "12k tokens",
-      model: "o3",
-      branch: "pointer/update-pain...",
+      title: "(512) 555-0142",
+      meta: "Patterson · skip-trace · 94% confidence",
+      icon: (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+      ),
+      color: "hsl(var(--foreground))",
     },
     {
-      icon: <RefreshIcon />,
-      title: "Fix sanity issue",
-      tokens: "12k tokens",
-      model: "claude-sonnet-4",
-      branch: "pointer/update-pain...",
+      title: "john@patterson-h.com",
+      meta: "Patterson · skip-trace · 88% confidence",
+      icon: (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="m22 7-10 5L2 7" />
+        </svg>
+      ),
+      color: "#D97706",
     },
     {
-      icon: <SparklesIcon />,
-      title: "Plan for seamless toast",
-      tokens: "30k tokens",
-      model: "o3",
-      branch: "pointer/update-pain...",
+      title: "4501 Riverside Dr",
+      meta: "Patterson · public records · 100% confidence",
+      icon: (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z" />
+        </svg>
+      ),
+      color: "hsl(var(--foreground))",
     },
   ]
 
   return (
     <div
-      className={className}
-      style={
-        {
-          width: "100%",
-          height: "100%",
-          position: "relative",
-          background: `linear-gradient(180deg, var(--pca-container-gradient-start) 0%, var(--pca-container-gradient-end) 100%)`,
-          backdropFilter: "blur(8.372px)",
-          borderRadius: "10.047px",
-          boxSizing: "border-box",
-          flexShrink: 0,
-          margin: "0 auto",
-          ...themeVars,
-        } as React.CSSProperties
-      }
+      style={{
+        width: "100%",
+        height: "100%",
+        position: "relative",
+        background: "transparent",
+        display: "flex",
+        alignItems: "flex-start",
+        justifyContent: "center",
+      }}
       role="img"
-      aria-label="Parallel coding agents working on different tasks simultaneously"
+      aria-label="Owner contact records attached to a deal"
     >
-      {/* Inner content area with gradient background */}
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "flex-start", // Changed to flex-start for top alignment
-          gap: "16px",
+          width: "calc(100% - 48px)",
+          margin: "24px 24px 0",
           padding: "20px",
-          height: "100%",
-          width: "calc(100% - 48px)", // Adjusted width for 24px margin on both sides
-          background: "linear-gradient(180deg, hsl(var(--primary) / 0.05) 0%, transparent 100%)", // Updated background property
+          background: "linear-gradient(180deg, hsl(var(--card) / 0.4) 0%, transparent 100%)",
           backdropFilter: "blur(16px)",
           borderRadius: "9.628px",
           border: "0.802px solid hsl(var(--border))",
-          overflow: "hidden",
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
           boxSizing: "border-box",
-          margin: "24px 24px 0 24px", // Updated margin to 24px on both sides
         }}
       >
-        {agents.map((agent, index) => (
+        {contacts.map((c, i) => (
           <div
-            key={index}
+            key={i}
             style={{
               display: "flex",
-              flexDirection: "row",
               alignItems: "flex-start",
-              gap: "8.658px",
-              padding: "6.494px 8.658px",
-              background: `linear-gradient(180deg, var(--pca-background-gradient-start) 0%, var(--pca-background-gradient-end) 100%)`,
-              backdropFilter: "blur(19.481px)",
+              gap: "10px",
+              padding: "8px 10px",
+              background: "linear-gradient(180deg, hsl(var(--card) / 0.4) 0%, transparent 100%)",
+              backdropFilter: "blur(19px)",
               borderRadius: "8.658px",
-              boxShadow: `0px 1.082px 2.165px 0px var(--pca-shadow-color)`,
-              border: "0.541px solid var(--pca-border-color)",
-              width: "100%",
-              maxWidth: "320px",
-              flexShrink: 0,
-              position: "relative",
-              overflow: "hidden",
+              boxShadow: "0px 1.082px 2.165px 0px rgba(0, 0, 0, 0.12)",
+              border: "0.541px solid hsl(var(--border))",
               boxSizing: "border-box",
             }}
           >
-            {/* Icon container */}
             <div
               style={{
+                width: "18px",
+                height: "18px",
                 display: "flex",
-                flexDirection: "row",
                 alignItems: "center",
-                justifyContent: "flex-start",
-                gap: "8.658px",
-                padding: "3.247px 0 0 0",
+                justifyContent: "center",
+                color: c.color,
                 flexShrink: 0,
+                paddingTop: "1px",
               }}
             >
-              <div
-                style={{
-                  width: "17.316px",
-                  height: "17.316px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  overflow: "hidden",
-                  flexShrink: 0,
-                }}
-              >
-                {agent.icon}
-              </div>
+              {c.icon}
             </div>
-            {/* Content container */}
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "flex-start",
-                justifyContent: "center",
-                gap: "2.164px",
-                padding: "0",
-                flexShrink: 0,
-                ...(index === 1
-                  ? {
-                      flexBasis: 0,
-                      flexGrow: 1,
-                      minHeight: "1px",
-                      minWidth: "1px",
-                    }
-                  : {}),
+                gap: "2px",
+                flex: 1,
+                minWidth: 0,
               }}
             >
               <div
                 style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontWeight: 400,
-                  fontSize: "10.823px",
-                  lineHeight: "17.316px",
-                  color: "var(--pca-text-primary)",
-                  whiteSpace: "pre",
-                  flexShrink: 0,
+                  fontFamily: "'Geist', sans-serif",
+                  fontWeight: 500,
+                  fontSize: "11px",
+                  color: "hsl(var(--foreground))",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                 }}
               >
-                {agent.title}
+                {c.title}
               </div>
               <div
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Geist', sans-serif",
                   fontWeight: 400,
-                  fontSize: "10.823px",
-                  lineHeight: "17.316px",
-                  color: "var(--pca-text-secondary)",
-                  whiteSpace: index === 1 ? "nowrap" : "pre",
-                  overflow: index === 1 ? "hidden" : "visible",
-                  textOverflow: index === 1 ? "ellipsis" : "clip",
-                  width: index === 1 ? "100%" : "auto",
-                  minWidth: index === 1 ? "100%" : "auto",
-                  flexShrink: 0,
+                  fontSize: "10px",
+                  color: "hsl(var(--muted-foreground))",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                 }}
               >
-                {`${agent.tokens} • ${agent.model} • ${agent.branch}`}
+                {c.meta}
               </div>
             </div>
           </div>

@@ -26,8 +26,8 @@ export function Header() {
   }
 
   return (
-    <header className="w-full py-4 px-6">
-      <div className="max-w-7xl mx-auto flex items-center justify-between relative">
+    <header className="w-full py-4 px-8">
+      <div className="w-full flex items-center justify-between relative">
         <div className="flex items-center">
           <Image src="/logos/nightdrop-logo.png" alt="Nightdrop" width={193} height={71} priority />
         </div>

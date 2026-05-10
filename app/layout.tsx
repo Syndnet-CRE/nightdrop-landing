@@ -6,8 +6,8 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
 
 export const metadata: Metadata = {
-  title: 'Nightdrop — Off-Market Deals, Every Morning',
-  description: 'Submit your buy box once. Get a curated digest of matched off-market properties in your inbox every morning — scored, written up, with owner contact attached.',
+  title: 'Nightdrop: Off-Market Deals, Every Morning',
+  description: 'Submit your buy box once. Get a curated digest of matched off-market properties in your inbox every morning, scored, written up, with owner contact attached.',
   icons: {
     icon: [
       {

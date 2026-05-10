@@ -3,194 +3,113 @@
 import type React from "react"
 
 const RealtimeCodingPreviews: React.FC = () => {
-  const themeVars = {
-    "--realtime-primary-color": "hsl(var(--primary))",
-    "--realtime-background-editor": "hsl(var(--background) / 0.8)", // Tinted gray from background
-    "--realtime-background-preview": "hsl(var(--background) / 0.8)", // Tinted gray from background
-    "--realtime-text-color": "hsl(var(--foreground))",
-    "--realtime-text-editor": "hsl(var(--foreground))",
-    "--realtime-text-preview": "hsl(var(--primary-foreground))", // For button text
-    "--realtime-border-color": "hsl(var(--border))",
-    "--realtime-border-main": "hsl(var(--border))",
-    "--realtime-connection-color": "hsl(var(--muted-foreground))",
-  }
-
   return (
     <div
-      className="" // Remove className prop if not used
-      style={
-        {
-          width: "100%", // Use 100% for responsiveness within parent
-          height: "100%", // Use 100% for responsiveness within parent
-          position: "relative",
-          background: "transparent",
-          ...themeVars,
-        } as React.CSSProperties
-      }
+      style={{
+        width: "100%",
+        height: "100%",
+        position: "relative",
+        background: "transparent",
+      }}
       role="img"
-      aria-label="Realtime Coding Previews interface showing split-screen code editor and live preview"
+      aria-label="Buy box criteria flowing into a matched property"
     >
-      {/* Left Panel - Code Editor */}
+      {/* Left panel — criteria */}
       <div
         style={{
           position: "absolute",
           top: "46px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "350px",
-          height: "221px",
-          background: "linear-gradient(180deg, var(--realtime-background-editor) 0%, transparent 100%)",
-          backdropFilter: "blur(7.907px)",
-          borderRadius: "9.488px",
-          border: "1px solid var(--realtime-border-main)",
-          overflow: "hidden",
-          boxSizing: "border-box",
-        }}
-        data-name="code-editor"
-      >
-        <div
-          style={{
-            padding: "9.488px 9.492px",
-            height: "100%",
-            boxSizing: "border-box",
-            position: "relative",
-            overflow: "hidden",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            justifyContent: "flex-start",
-          }}
-        >
-          <div
-            style={{
-              fontFamily: "'Geist Mono', 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
-              fontSize: "10.279px",
-              lineHeight: "15.814px",
-              letterSpacing: "-0.3163px",
-              color: "var(--realtime-text-editor)",
-              width: "545.453px",
-              maxWidth: "100%",
-              position: "relative",
-              margin: 0,
-              flexGrow: 1,
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            <p style={{ margin: 0, whiteSpace: "pre-wrap", fontWeight: 400, display: "block" }}>switch (type) {"{"}</p>
-            <p style={{ margin: 0, whiteSpace: "pre-wrap", fontWeight: 400, display: "block" }}> case 'success':</p>
-            <p style={{ margin: 0, whiteSpace: "pre-wrap", fontWeight: 400, display: "block" }}> return {"{"}</p>
-            <p style={{ margin: 0, whiteSpace: "pre-wrap", fontWeight: 400, display: "block" }}>
-              {" "}
-              border: theme === 'dark' ? 'border-[rgba(34,197,94,0.4)]' : 'border-green-200',
-            </p>
-            <p style={{ margin: 0, whiteSpace: "pre-wrap", fontWeight: 400, display: "block" }}> icon: (</p>
-            <p style={{ margin: 0, whiteSpace: "pre-wrap", fontWeight: 400, display: "block" }}>
-              {" "}
-              &lt;svg className={"{baseIconClasses}"} fill="none" viewBox="0 0 14 14"&gt;
-            </p>
-            <p style={{ margin: 0, whiteSpace: "pre-wrap", fontWeight: 400, display: "block" }}> &lt;path</p>
-            <p style={{ margin: 0, whiteSpace: "pre-wrap", fontWeight: 400, display: "block" }}>
-              {" "}
-              d="M3.85156 7.875L6.47656 10.5L10.8516 3.5"
-            </p>
-            <p style={{ margin: 0, whiteSpace: "pre-wrap", fontWeight: 400, display: "block" }}>
-              {" "}
-              stroke="var(--realtime-primary-color)"
-            </p>
-            <p style={{ margin: 0, whiteSpace: "pre-wrap", fontWeight: 400, display: "block" }}>
-              {" "}
-              strokeLinecap="round"
-            </p>
-            <p style={{ margin: 0, whiteSpace: "pre-wrap", fontWeight: 400, display: "block" }}>
-              {" "}
-              strokeLinejoin="round"
-            </p>
-            <p style={{ margin: 0, whiteSpace: "pre-wrap", fontWeight: 400, display: "block" }}> strokeWidth="1.5"</p>
-            <p style={{ margin: 0, whiteSpace: "pre-wrap", fontWeight: 400, display: "block" }}> /&gt;</p>
-            <p style={{ margin: 0, whiteSpace: "pre-wrap", fontWeight: 400, display: "block" }}> &lt;/svg&gt;</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Right Panel - Live Preview */}
-      <div
-        style={{
-          position: "absolute",
-          top: "46px",
-          left: "calc(50% + 87.499px)",
+          left: "calc(50% - 87.5px)",
           transform: "translateX(-50%)",
           width: "175px",
-          height: "221px",
-          background: "linear-gradient(180deg, var(--realtime-background-preview) 0%, transparent 100%)",
+          height: "180px",
+          background: "linear-gradient(180deg, hsl(var(--background) / 0.8) 0%, transparent 100%)",
           backdropFilter: "blur(7.907px)",
           borderRadius: "9.488px",
-          borderTopRightRadius: "9.488px",
-          // Removed the border property from here
+          border: "1px solid hsl(var(--border))",
           overflow: "hidden",
           boxSizing: "border-box",
         }}
-        data-name="preview-panel"
       >
-        <div
-          style={{
-            padding: "9.488px 9.492px",
-            height: "100%",
-            boxSizing: "border-box",
-            position: "relative",
-            overflow: "hidden",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "flex-start",
-            justifyContent: "center",
-            background: "var(--realtime-background-preview)", // Applied solid background here
-          }}
-        >
-          {/* Download Button - Exact positioning from Figma */}
+        <div style={{ padding: "10px", height: "100%", boxSizing: "border-box", display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <div
             style={{
-              position: "absolute",
-              top: "calc(50% + 0.001px)",
-              left: "calc(50% - 71.501px)",
-              transform: "translate(-50%, -50%)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "7.907px",
-              background: "var(--realtime-primary-color)",
-              color: "var(--realtime-text-preview)",
-              border: "none",
-              cursor: "pointer",
-              fontWeight: 500,
-              whiteSpace: "nowrap",
-              transition: "all 0.2s ease",
-              padding: "6.326px 12.651px",
-              borderRadius: "11.07px",
-              boxShadow:
-                "0px 52.186px 14.233px rgba(0, 0, 0, 0), 0px 33.209px 12.651px rgba(0, 0, 0, 0.01), 0px 18.977px 11.07px rgba(0, 0, 0, 0.05), 0px 7.907px 7.907px rgba(0, 0, 0, 0.09), 0px 1.581px 4.744px rgba(0, 0, 0, 0.1)",
-              boxSizing: "border-box",
+              fontFamily: "'Geist Mono', 'SF Mono', Monaco, Consolas, monospace",
+              fontSize: "9.5px",
+              lineHeight: "14px",
+              color: "hsl(var(--foreground))",
+              whiteSpace: "pre-wrap",
             }}
           >
-            <div
-              style={{
-                fontFamily: "'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-                fontSize: "20.558px",
-                lineHeight: "31.628px",
-                letterSpacing: "-0.6326px",
-                fontWeight: 500,
-                color: "var(--realtime-text-preview)", // Changed to use theme variable
-                textAlign: "left",
-                whiteSpace: "pre",
-              }}
-            >
-              Download for macOS
-            </div>
+            <p style={{ margin: 0 }}><span style={{ color: "hsl(var(--muted-foreground))" }}>asset:</span> <span style={{ color: "hsl(var(--primary))" }}>"self storage"</span></p>
+            <p style={{ margin: 0 }}><span style={{ color: "hsl(var(--muted-foreground))" }}>geo:</span> <span style={{ color: "hsl(var(--primary))" }}>"TX · Austin"</span></p>
+            <p style={{ margin: 0 }}><span style={{ color: "hsl(var(--muted-foreground))" }}>lot_min:</span> <span style={{ color: "#D97706" }}>1.5</span></p>
+            <p style={{ margin: 0 }}><span style={{ color: "hsl(var(--muted-foreground))" }}>value:</span> <span style={{ color: "#D97706" }}>500K-2M</span></p>
+            <p style={{ margin: 0 }}><span style={{ color: "hsl(var(--muted-foreground))" }}>distress:</span></p>
+            <p style={{ margin: 0 }}>  <span style={{ color: "hsl(var(--primary))" }}>"tax"</span>,</p>
+            <p style={{ margin: 0 }}>  <span style={{ color: "hsl(var(--primary))" }}>"absentee"</span>,</p>
+            <p style={{ margin: 0 }}>  <span style={{ color: "hsl(var(--primary))" }}>"lis_pendens"</span></p>
+            <p style={{ margin: 0 }}><span style={{ color: "hsl(var(--muted-foreground))" }}>schedule:</span> <span style={{ color: "hsl(var(--primary))" }}>"02:00"</span></p>
           </div>
         </div>
       </div>
 
-      {/* Connection Line - Exact positioning from Figma */}
+      {/* Right panel — match preview */}
+      <div
+        style={{
+          position: "absolute",
+          top: "46px",
+          left: "calc(50% + 87.5px)",
+          transform: "translateX(-50%)",
+          width: "175px",
+          height: "180px",
+          background: "linear-gradient(180deg, hsl(var(--background) / 0.8) 0%, transparent 100%)",
+          backdropFilter: "blur(7.907px)",
+          borderRadius: "9.488px",
+          overflow: "hidden",
+          boxSizing: "border-box",
+        }}
+      >
+        <div
+          style={{
+            padding: "10px",
+            height: "100%",
+            boxSizing: "border-box",
+            position: "relative",
+            background: "hsl(var(--background) / 0.8)",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "8px",
+          }}
+        >
+          <div
+            style={{
+              width: "100%",
+              padding: "10px",
+              borderRadius: "8px",
+              background: "hsl(var(--card) / 0.6)",
+              border: "1px solid hsl(var(--border))",
+              position: "relative",
+              fontFamily: "'Geist', sans-serif",
+            }}
+          >
+            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "hsl(var(--primary))", borderRadius: "8px 8px 0 0", boxShadow: "0 0 8px hsl(var(--primary) / 0.6)" }} />
+            <div style={{ fontSize: "11px", fontWeight: 600, color: "hsl(var(--foreground))", marginTop: "2px" }}>1402 Bouldin Ave</div>
+            <div style={{ fontSize: "9px", color: "hsl(var(--muted-foreground))", marginTop: "2px" }}>Austin, TX · Self storage</div>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "6px" }}>
+              <span style={{ fontSize: "8px", color: "hsl(var(--muted-foreground))", textTransform: "uppercase", letterSpacing: "0.5px" }}>Match</span>
+              <span style={{ fontSize: "13px", fontWeight: 700, color: "hsl(var(--primary))" }}>0.91</span>
+            </div>
+          </div>
+          <div style={{ fontSize: "9px", color: "hsl(var(--muted-foreground))", fontFamily: "'Geist', sans-serif", textAlign: "center" }}>
+            <span style={{ color: "#D97706", fontWeight: 600 }}>+27</span> more matched
+          </div>
+        </div>
+      </div>
+
+      {/* Vertical connecting line */}
       <div
         style={{
           position: "absolute",
@@ -202,54 +121,26 @@ const RealtimeCodingPreviews: React.FC = () => {
           justifyContent: "center",
         }}
       >
-        {/* This div now directly contains the SVG for the vertical line */}
-        <div
-          style={{
-            position: "relative",
-            width: "2px", // Width of the line (stroke width)
-            height: "285.088px", // Length of the line
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+        <div style={{ position: "relative", width: "2px", height: "140px" }}>
           <svg
             width="2"
-            height="285.088"
-            viewBox="0 0 2 285.088"
+            height="140"
+            viewBox="0 0 2 140"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            style={{
-              position: "absolute",
-              inset: 0,
-              display: "block",
-              maxWidth: "none",
-              width: "100%",
-              height: "100%",
-            }}
+            style={{ position: "absolute", inset: 0 }}
           >
             <defs>
-              <linearGradient id="connectionGradient" x1="1" y1="0" x2="1" y2="285.088" gradientUnits="userSpaceOnUse">
-                <stop stopColor="var(--realtime-primary-color)" stopOpacity="0" />
-                <stop offset="0.5" stopColor="var(--realtime-primary-color)" />
-                <stop offset="1" stopColor="var(--realtime-primary-color)" stopOpacity="0" />
+              <linearGradient id="connectionGradient2" x1="1" y1="0" x2="1" y2="140" gradientUnits="userSpaceOnUse">
+                <stop stopColor="hsl(var(--primary))" stopOpacity="0" />
+                <stop offset="0.5" stopColor="hsl(var(--primary))" />
+                <stop offset="1" stopColor="hsl(var(--primary))" stopOpacity="0" />
               </linearGradient>
             </defs>
-            <path d="M1 0V285.088" stroke="url(#connectionGradient)" strokeWidth="2" />
+            <path d="M1 0V140" stroke="url(#connectionGradient2)" strokeWidth="2" />
           </svg>
         </div>
       </div>
-
-      {/* Live Recording Indicator */}
-
-      {/* Sync Indicator at connection point */}
-
-      <style jsx>{`
-        @keyframes pulse {
-          0%, 100% { opacity: 0.4; }
-          50% { opacity: 1; }
-        }
-      `}</style>
     </div>
   )
 }

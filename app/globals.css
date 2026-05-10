@@ -20,7 +20,7 @@
     --popover-foreground: 160 14% 93%;
 
     /* Primary Accent Colors */
-    --primary: 111 56% 54%; /* #5BCC48 — Parcyl brand green */
+    --primary: 111 56% 54%; /* #5BCC48 - Parcyl brand green */
     --primary-foreground: 160 8% 6%; /* #0d0f0e */
     --primary-dark: 111 65% 40%; /* deeper green for gradients */
     --primary-light: 111 48% 80%; /* soft green for badges/gradients */

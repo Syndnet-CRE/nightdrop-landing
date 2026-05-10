@@ -7,8 +7,8 @@ import { SIGNUP_URL } from "@/lib/config"
 export function HeroSection() {
   return (
     <section
-      className="flex flex-col items-center text-center relative mx-auto rounded-2xl overflow-hidden my-6 py-0 px-4
-         w-full h-[400px] md:w-[1220px] md:h-[600px] lg:h-[810px] md:px-0"
+      className="flex flex-col items-center text-center relative rounded-2xl overflow-hidden py-0 px-4
+         w-full h-[400px] md:h-[600px] lg:h-[810px] md:px-0"
     >
       {/* SVG Background */}
       <div className="absolute inset-0 z-0">
@@ -387,8 +387,8 @@ export function HeroSection() {
               gradientUnits="userSpaceOnUse"
             >
               <stop stopColor="hsl(var(--foreground))" />
-              <stop offset="0.578125" stopColor="hsl(var(--primary-light))" />
-              <stop offset="1" stopColor="hsl(var(--primary))" />
+              <stop offset="0.578125" stopColor="hsl(var(--primary))" />
+              <stop offset="1" stopColor="hsl(var(--primary-dark))" />
             </linearGradient>
             <linearGradient
               id="paint2_linear_186_1134"
@@ -399,8 +399,8 @@ export function HeroSection() {
               gradientUnits="userSpaceOnUse"
             >
               <stop stopColor="hsl(var(--foreground))" />
-              <stop offset="0.578125" stopColor="hsl(var(--primary-light))" />
-              <stop offset="1" stopColor="hsl(var(--primary))" />
+              <stop offset="0.578125" stopColor="hsl(var(--primary))" />
+              <stop offset="1" stopColor="hsl(var(--primary-dark))" />
             </linearGradient>
             <linearGradient
               id="paint3_linear_186_1134"
@@ -411,8 +411,8 @@ export function HeroSection() {
               gradientUnits="userSpaceOnUse"
             >
               <stop stopColor="hsl(var(--foreground))" />
-              <stop offset="0.578125" stopColor="hsl(var(--primary-light))" />
-              <stop offset="1" stopColor="hsl(var(--primary))" />
+              <stop offset="0.578125" stopColor="hsl(var(--primary))" />
+              <stop offset="1" stopColor="hsl(var(--primary-dark))" />
             </linearGradient>
             <radialGradient
               id="paint4_radial_186_1134"
@@ -423,8 +423,8 @@ export function HeroSection() {
               gradientTransform="translate(989.13 557.24) rotate(47.9516) scale(466.313 471.424)"
             >
               <stop stopColor="hsl(var(--foreground))" />
-              <stop offset="0.157789" stopColor="hsl(var(--primary-light))" />
-              <stop offset="1" stopColor="hsl(var(--primary))" />
+              <stop offset="0.157789" stopColor="hsl(var(--primary))" />
+              <stop offset="1" stopColor="hsl(var(--primary-dark))" />
             </radialGradient>
             <clipPath id="clip0_186_1134">
               <rect width="1220" height="810" rx="16" fill="hsl(var(--foreground))" />
@@ -443,7 +443,7 @@ export function HeroSection() {
           Tell us what you're looking for. Deals in your inbox every morning.
         </h1>
         <p className="text-muted-foreground text-base md:text-base lg:text-lg font-medium leading-relaxed max-w-lg mx-auto">
-          Submit your acquisition criteria once. Every morning we deliver a curated digest of matched off-market properties — scored by distress signals, written up as actionable deal briefs, with owner contact info attached. No searching. No platforms.
+          Submit your acquisition criteria once. Every morning we deliver a curated digest of matched off-market properties, scored by distress signals, written up as actionable deal briefs, with owner contact info attached. No searching. No platforms.
         </p>
       </div>
 
