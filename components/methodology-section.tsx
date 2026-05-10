@@ -108,10 +108,10 @@ export function MethodologySection() {
             {distressSignals.map(({ name, detail, Icon }) => (
               <div
                 key={name}
-                className="rounded-2xl border border-white/15 bg-white/[0.03] backdrop-blur-sm p-6 md:p-7 flex flex-col items-center text-center gap-4 transition-colors hover:border-primary/40"
+                className="flex flex-col items-center text-center gap-4 px-2"
               >
-                <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center shadow-[0_0_28px_-6px_rgba(91,204,72,0.5)]">
-                  <Icon className="w-7 h-7 text-white" strokeWidth={2} />
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center shadow-[0_0_28px_-6px_rgba(91,204,72,0.45)]">
+                  <Icon className="w-7 h-7 text-white" strokeWidth={1.75} />
                 </div>
                 <h3 className="text-foreground text-lg md:text-xl font-semibold leading-tight">
                   {name}
