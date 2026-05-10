@@ -1,4 +1,6 @@
 import { Fragment } from "react"
+import { Inbox, Lock } from "lucide-react"
+import type { LucideIcon } from "lucide-react"
 
 interface Step {
   idx: number
@@ -8,6 +10,7 @@ interface Step {
   startMin: number
   endMin: number
   milestone?: boolean
+  Icon?: LucideIcon
 }
 
 const TOTAL_MINUTES = 361
@@ -21,6 +24,7 @@ const steps: Step[] = [
     startMin: 0,
     endMin: 0,
     milestone: true,
+    Icon: Lock,
   },
   {
     idx: 2,
@@ -64,6 +68,7 @@ const steps: Step[] = [
     startMin: 361,
     endMin: 361,
     milestone: true,
+    Icon: Inbox,
   },
 ]
 
@@ -106,17 +111,17 @@ export function MidnightRunSection() {
                 className="absolute top-0 -translate-x-1/2 flex flex-col items-center gap-1"
                 style={{ left: pct(h.min) }}
               >
-                <span className="text-muted-foreground text-[11px] font-medium tabular-nums tracking-wide">
+                <span className="text-muted-foreground text-[11px] font-medium tabular-nums tracking-wide whitespace-nowrap">
                   {h.label}
                 </span>
-                <div className="w-px h-2 bg-white/20" />
+                <div className="w-px h-2 bg-white/15" />
               </div>
             ))}
           </div>
 
           {steps.map((step, i) => {
             const isLast = i === steps.length - 1
-            const borderClass = isLast ? "" : "border-b border-white/[0.06]"
+            const borderClass = isLast ? "" : "border-b border-white/[0.04]"
             return (
               <Fragment key={step.idx}>
                 {/* Left: badge + time + title */}
@@ -138,7 +143,7 @@ export function MidnightRunSection() {
                   {hourMarkers.map((h) => (
                     <div
                       key={h.label}
-                      className="absolute top-3 bottom-1 w-px bg-white/[0.04]"
+                      className="absolute top-3 bottom-1 w-px bg-white/[0.025]"
                       style={{ left: pct(h.min) }}
                       aria-hidden="true"
                     />
@@ -149,17 +154,20 @@ export function MidnightRunSection() {
                     aria-hidden="true"
                   />
                   {/* Bar or milestone */}
-                  {step.milestone ? (
+                  {step.milestone && step.Icon ? (
                     <div
-                      className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 mt-1"
+                      className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 mt-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center shadow-[0_0_0_4px_rgba(91,204,72,0.18)]"
                       style={{ left: pct(step.startMin) }}
                       aria-hidden="true"
                     >
-                      <div className="w-3 h-3 rotate-45 bg-primary shadow-[0_0_0_4px_rgba(91,204,72,0.18)]" />
+                      <step.Icon
+                        className="w-3.5 h-3.5 text-primary-foreground"
+                        strokeWidth={2.5}
+                      />
                     </div>
                   ) : (
                     <div
-                      className="absolute top-1/2 -translate-y-1/2 mt-1 h-2.5 rounded-full bg-gradient-to-r from-primary/70 to-primary/40 ring-1 ring-primary/20 shadow-[0_0_24px_-4px_rgba(91,204,72,0.35)]"
+                      className="absolute top-1/2 -translate-y-1/2 mt-1 h-2.5 rounded-full bg-primary/70 ring-1 ring-primary/20 shadow-[0_0_24px_-4px_rgba(91,204,72,0.35)]"
                       style={{
                         left: pct(step.startMin),
                         width: `calc(${pct(step.endMin)} - ${pct(step.startMin)})`,
@@ -202,14 +210,19 @@ export function MidnightRunSection() {
                 className="relative h-1.5 rounded-full bg-white/[0.08]"
                 aria-hidden="true"
               >
-                {step.milestone ? (
+                {step.milestone && step.Icon ? (
                   <div
-                    className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rotate-45 bg-primary"
+                    className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-primary flex items-center justify-center"
                     style={{ left: pct(step.startMin) }}
-                  />
+                  >
+                    <step.Icon
+                      className="w-3 h-3 text-primary-foreground"
+                      strokeWidth={2.5}
+                    />
+                  </div>
                 ) : (
                   <div
-                    className="absolute top-0 bottom-0 rounded-full bg-gradient-to-r from-primary/70 to-primary/40"
+                    className="absolute top-0 bottom-0 rounded-full bg-primary/70"
                     style={{
                       left: pct(step.startMin),
                       width: `calc(${pct(step.endMin)} - ${pct(step.startMin)})`,
