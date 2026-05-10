@@ -450,7 +450,7 @@ export function HeroSection() {
         </p>
       </div>
 
-      <div className="relative z-10 flex flex-col md:flex-row items-center gap-3 md:gap-4 w-full max-w-md md:max-w-none px-4">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 w-full max-w-md md:max-w-none px-4">
         <Link href={SIGNUP_URL}>
           <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-7 py-3 rounded-full font-medium text-base shadow-lg ring-1 ring-white/10">
             Submit your buy box before midnight →
