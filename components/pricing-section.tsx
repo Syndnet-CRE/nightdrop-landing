@@ -1,7 +1,8 @@
+'use client'
+
 import { Check } from "lucide-react"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { SIGNUP_URL } from "@/lib/config"
+import { useWaitlist } from "@/components/waitlist-context"
 
 interface PricingPlan {
   name: string
@@ -12,7 +13,6 @@ interface PricingPlan {
   features: string[]
   trial: string | null
   buttonText: string
-  buttonHref: string
   buttonClass: string
   popular?: boolean
 }
@@ -35,7 +35,6 @@ const pricingPlans: PricingPlan[] = [
     ],
     trial: "3-day free trial · 3 buy boxes · 15 deals",
     buttonText: "Start your trial",
-    buttonHref: SIGNUP_URL,
     buttonClass:
       "bg-primary shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] !text-zinc-900 hover:bg-primary/90 transition-shadow hover:shadow-[0_0_22px_-4px_rgba(91,204,72,0.65)]",
   },
@@ -55,7 +54,6 @@ const pricingPlans: PricingPlan[] = [
     ],
     trial: "3-day free trial · 5 buy boxes · 75 deals",
     buttonText: "Start your trial",
-    buttonHref: SIGNUP_URL,
     buttonClass:
       "bg-primary-foreground shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] !text-white hover:bg-primary-foreground/90 transition-shadow hover:shadow-[0_0_22px_-4px_rgba(91,204,72,0.45)]",
     popular: true,
@@ -74,14 +72,14 @@ const pricingPlans: PricingPlan[] = [
       "API access",
     ],
     trial: null,
-    buttonText: "Contact us",
-    buttonHref: "#",
+    buttonText: "Join the waitlist",
     buttonClass:
       "bg-secondary shadow-[0px_1px_1px_-0.5px_rgba(16,24,40,0.20)] !text-zinc-900 hover:bg-secondary/90 transition-shadow hover:shadow-[0_0_22px_-4px_rgba(255,255,255,0.18)]",
   },
 ]
 
 export function PricingSection() {
+  const { openWaitlist } = useWaitlist()
   return (
     <section className="w-full px-5 overflow-hidden flex flex-col justify-start items-center my-0 py-8 md:py-14">
       <div className="self-stretch relative flex flex-col justify-center items-center gap-2 py-0">
@@ -142,13 +140,12 @@ export function PricingSection() {
                   </div>
                 </div>
               </div>
-              <Link href={plan.buttonHref} className="self-stretch">
-                <Button
-                  className={`self-stretch w-full px-5 py-2 rounded-[40px] flex justify-center items-center ${plan.buttonClass}`}
-                >
-                  <span className="text-center text-sm font-medium leading-tight">{plan.buttonText}</span>
-                </Button>
-              </Link>
+              <Button
+                onClick={openWaitlist}
+                className={`self-stretch w-full px-5 py-2 rounded-[40px] flex justify-center items-center ${plan.buttonClass}`}
+              >
+                <span className="text-center text-sm font-medium leading-tight">{plan.buttonText}</span>
+              </Button>
               {plan.trial && (
                 <p
                   className={`self-stretch text-center text-xs font-medium leading-tight ${plan.popular ? "text-primary-foreground/70" : "text-muted-foreground"}`}

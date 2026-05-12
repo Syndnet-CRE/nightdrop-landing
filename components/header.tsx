@@ -7,9 +7,10 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { Menu } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { LOGIN_URL, SIGNUP_URL } from "@/lib/config"
+import { useWaitlist } from "@/components/waitlist-context"
 
 export function Header() {
+  const { openWaitlist } = useWaitlist()
   const navItems = [
     { name: "How It Works", href: "#features-section" },
     { name: "Pricing", href: "#pricing-section" },
@@ -18,7 +19,7 @@ export function Header() {
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
-    const targetId = href.substring(1) // Remove '#' from href
+    const targetId = href.substring(1)
     const targetElement = document.getElementById(targetId)
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: "smooth" })
@@ -51,16 +52,12 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <Link href={LOGIN_URL} className="hidden md:block">
-            <Button variant="outline" className="px-5 py-2 rounded-full font-medium text-sm">
-              Sign In
-            </Button>
-          </Link>
-          <Link href={SIGNUP_URL} className="hidden md:block">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-5 py-2 rounded-full font-medium text-sm">
-              Sign Up Free
-            </Button>
-          </Link>
+          <Button
+            onClick={openWaitlist}
+            className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90 px-5 py-2 rounded-full font-medium text-sm"
+          >
+            Join Waitlist
+          </Button>
           <Sheet>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon" className="text-foreground">
@@ -83,13 +80,13 @@ export function Header() {
                     {item.name}
                   </Link>
                 ))}
-                <div className="flex gap-3 mt-4">
-                  <Link href={LOGIN_URL} className="flex-1">
-                    <Button variant="outline" className="w-full rounded-full font-medium text-sm">Sign In</Button>
-                  </Link>
-                  <Link href={SIGNUP_URL} className="flex-1">
-                    <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full font-medium text-sm">Sign Up Free</Button>
-                  </Link>
+                <div className="mt-4">
+                  <Button
+                    onClick={openWaitlist}
+                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full font-medium text-sm"
+                  >
+                    Join Waitlist
+                  </Button>
                 </div>
               </nav>
             </SheetContent>

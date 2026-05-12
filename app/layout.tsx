@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import { WaitlistProvider } from '@/components/waitlist-context'
+import { WaitlistModal } from '@/components/waitlist-modal'
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
@@ -35,7 +37,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable}`}>
       <body className="font-sans antialiased">
-        {children}
+        <WaitlistProvider>
+          {children}
+          <WaitlistModal />
+        </WaitlistProvider>
       </body>
     </html>
   )

@@ -2,9 +2,10 @@
 
 import Image from "next/image"
 import { Twitter, Github, Linkedin } from "lucide-react"
-import { LOGIN_URL, SIGNUP_URL } from "@/lib/config"
+import { useWaitlist } from "@/components/waitlist-context"
 
 export function FooterSection() {
+  const { openWaitlist } = useWaitlist()
   return (
     <footer className="w-full max-w-[1320px] mx-auto px-5 flex flex-col md:flex-row justify-between items-start gap-8 md:gap-0 py-10 md:py-[70px]">
       {/* Left Section: Logo, Description, Social Links */}
@@ -33,8 +34,7 @@ export function FooterSection() {
             <a href="#features-section" className="text-foreground text-sm font-normal leading-5 hover:underline">How It Works</a>
             <a href="#pricing-section" className="text-foreground text-sm font-normal leading-5 hover:underline">Pricing</a>
             <a href="#faq-section" className="text-foreground text-sm font-normal leading-5 hover:underline">FAQ</a>
-            <a href={SIGNUP_URL} className="text-foreground text-sm font-normal leading-5 hover:underline">Sign Up</a>
-            <a href={LOGIN_URL} className="text-foreground text-sm font-normal leading-5 hover:underline">Sign In</a>
+            <button onClick={openWaitlist} className="text-foreground text-sm font-normal leading-5 hover:underline text-left">Join Waitlist</button>
           </div>
         </div>
         <div className="flex flex-col justify-start items-start gap-3">

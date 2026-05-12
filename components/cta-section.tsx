@@ -1,8 +1,10 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { SIGNUP_URL } from "@/lib/config"
+import { useWaitlist } from "@/components/waitlist-context"
 
 export function CTASection() {
+  const { openWaitlist } = useWaitlist()
   return (
     <section className="w-full pt-20 md:pt-60 lg:pt-60 pb-10 md:pb-20 px-5 relative flex flex-col justify-center items-center overflow-visible">
       <div className="absolute inset-0 top-[-90px]">
@@ -115,14 +117,13 @@ export function CTASection() {
           </p>
         </div>
         <div className="flex flex-col items-center gap-3">
-          <Link href={SIGNUP_URL}>
-            <Button
-              className="px-[30px] py-2 bg-secondary text-secondary-foreground text-base font-medium leading-6 rounded-[99px] shadow-[0px_0px_0px_4px_rgba(255,255,255,0.13)] hover:bg-secondary/90 transition-all duration-200"
-              size="lg"
-            >
-              Be in tomorrow's inbox →
-            </Button>
-          </Link>
+          <Button
+            onClick={openWaitlist}
+            className="px-[30px] py-2 bg-secondary text-secondary-foreground text-base font-medium leading-6 rounded-[99px] shadow-[0px_0px_0px_4px_rgba(255,255,255,0.13)] hover:bg-secondary/90 transition-all duration-200"
+            size="lg"
+          >
+            Be in tomorrow's inbox →
+          </Button>
           <p className="text-muted-foreground text-xs md:text-sm font-medium">
             3-day free trial · Card required · Cancel anytime
           </p>

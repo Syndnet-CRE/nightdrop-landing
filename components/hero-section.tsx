@@ -1,10 +1,13 @@
+'use client'
+
 import React from "react"
 import { Button } from "@/components/ui/button"
 import { Header } from "./header"
 import Link from "next/link"
-import { SIGNUP_URL } from "@/lib/config"
+import { useWaitlist } from "@/components/waitlist-context"
 
 export function HeroSection() {
+  const { openWaitlist } = useWaitlist()
   return (
     <section
       className="flex flex-col items-center text-center relative rounded-2xl py-0 px-4
@@ -455,11 +458,12 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 w-full max-w-md md:max-w-none px-4">
-        <Link href={SIGNUP_URL}>
-          <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-7 py-3 rounded-full font-medium text-base shadow-lg ring-1 ring-white/10">
-            Submit your buy box before midnight →
-          </Button>
-        </Link>
+        <Button
+          onClick={openWaitlist}
+          className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-7 py-3 rounded-full font-medium text-base shadow-lg ring-1 ring-white/10"
+        >
+          Submit your buy box before midnight →
+        </Button>
         <Link href="#features-section">
           <Button
             variant="ghost"
