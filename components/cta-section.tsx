@@ -125,7 +125,7 @@ export function CTASection() {
             Be in tomorrow's inbox →
           </Button>
           <p className="text-muted-foreground text-xs md:text-sm font-medium">
-            3-day free trial · Card required · Cancel anytime
+            Free beta access · Subscription pricing coming soon
           </p>
         </div>
       </div>

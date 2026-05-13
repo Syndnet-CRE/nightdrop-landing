@@ -40,16 +40,6 @@ const faqData = [
     answer:
       "Residential (single-family, 2-4 unit, multifamily), commercial (industrial, retail, office), self-storage, land, and mixed-use. Buy box criteria are fully customizable.",
   },
-  {
-    question: "Can I cancel anytime?",
-    answer:
-      "Yes. Cancel from your account in two clicks. You keep your nightly runs through the end of your billing period — no refunds, no pro-rating.",
-  },
-  {
-    question: "Is there a contract?",
-    answer:
-      "No. Month-to-month. Cancel anytime.",
-  },
 ]
 
 interface FAQItemProps {

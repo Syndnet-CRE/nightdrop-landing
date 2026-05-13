@@ -39,9 +39,9 @@ const rows: ComparisonRow[] = [
     oldWay: "Find a VA on Fiverr · train them · review their work · pay $15/hr",
   },
   {
-    need: "Total monthly cost",
-    nightdrop: "$149 flat",
-    oldWay: "$99 PropStream + $15/hr VA + hours of manual screening",
+    need: "What it costs per deal",
+    nightdrop: "50¢–$1 per deal · delivered and written up every morning",
+    oldWay: "$99/mo tools + $15/hr VA + hours of your time — per pull",
   },
 ]
 

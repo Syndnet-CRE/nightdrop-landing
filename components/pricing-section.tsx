@@ -20,9 +20,9 @@ interface PricingPlan {
 const pricingPlans: PricingPlan[] = [
   {
     name: "Starter",
-    price: "$149",
-    priceSuffix: "/month",
-    tagline: "~$1 per deal",
+    price: "$",
+    priceSuffix: "",
+    tagline: "1 active buy box",
     description: "One buy box. Up to 5 deals every morning.",
     features: [
       "1 active buy box",
@@ -40,8 +40,8 @@ const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Operator",
-    price: "$249",
-    priceSuffix: "/month",
+    price: "$",
+    priceSuffix: "",
     tagline: "Multi-market coverage",
     description: "Up to 5 buy boxes. More markets, more deals every morning.",
     features: [
@@ -85,10 +85,10 @@ export function PricingSection() {
       <div className="self-stretch relative flex flex-col justify-center items-center gap-2 py-0">
         <div className="flex flex-col justify-start items-center gap-4">
           <h2 className="text-center text-foreground text-4xl md:text-5xl font-semibold leading-tight md:leading-[40px]">
-            Pricing built for active investors
+            Plans built for active investors
           </h2>
           <p className="self-stretch text-center text-muted-foreground text-sm font-medium leading-tight">
-            No contracts. Cancel anytime. Card required to start your trial.
+            Free beta access now. Subscription pricing coming end of May.
           </p>
         </div>
       </div>
@@ -175,7 +175,7 @@ export function PricingSection() {
         ))}
       </div>
       <p className="mt-8 text-center text-muted-foreground text-xs font-medium leading-relaxed max-w-2xl mx-auto px-4">
-        No refunds — you're paying for nightly infrastructure, data access, and compute. Cancel anytime. Runs through the end of your billing period.
+        Beta access is free. Subscription pricing will be announced end of May — you'll hear from us before anything changes.
       </p>
     </section>
   )

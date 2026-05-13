@@ -13,7 +13,7 @@ export function Header() {
   const { openWaitlist } = useWaitlist()
   const navItems = [
     { name: "How It Works", href: "#features-section" },
-    { name: "Pricing", href: "#pricing-section" },
+    { name: "Plans", href: "#pricing-section" },
     { name: "FAQ", href: "#faq-section" },
   ]
 

@@ -32,7 +32,7 @@ export function FooterSection() {
           <h3 className="text-muted-foreground text-sm font-medium leading-5">Product</h3>
           <div className="flex flex-col justify-end items-start gap-2">
             <a href="#features-section" className="text-foreground text-sm font-normal leading-5 hover:underline">How It Works</a>
-            <a href="#pricing-section" className="text-foreground text-sm font-normal leading-5 hover:underline">Pricing</a>
+            <a href="#pricing-section" className="text-foreground text-sm font-normal leading-5 hover:underline">Plans</a>
             <a href="#faq-section" className="text-foreground text-sm font-normal leading-5 hover:underline">FAQ</a>
             <button onClick={openWaitlist} className="text-foreground text-sm font-normal leading-5 hover:underline text-left">Join Waitlist</button>
           </div>

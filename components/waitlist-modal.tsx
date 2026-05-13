@@ -119,7 +119,7 @@ export function WaitlistModal() {
             </DialogPrimitive.Close>
           </div>
 
-          <div className="overflow-y-auto flex-1 px-6 py-5">
+          <div className="overflow-y-auto flex-1 px-6 py-5 scrollbar-hide">
             {status === 'success' ? (
               <div className="flex flex-col items-center justify-center py-10 text-center gap-4">
                 <CheckCircle2 className="w-12 h-12" style={{ color: '#1DAF29' }} />

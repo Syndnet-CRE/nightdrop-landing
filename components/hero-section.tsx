@@ -475,7 +475,7 @@ export function HeroSection() {
       </div>
 
       <p className="relative z-10 mt-3 md:mt-4 text-muted-foreground text-xs md:text-sm font-medium">
-        3-day free trial · Card required · Cancel anytime
+        Free beta access · Subscription pricing coming soon
       </p>
     </section>
   )
