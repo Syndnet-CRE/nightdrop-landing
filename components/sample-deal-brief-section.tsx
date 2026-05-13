@@ -1,4 +1,4 @@
-import { MapPin, Phone, Star } from "lucide-react"
+import { AlertTriangle, MapPin, Star } from "lucide-react"
 
 export function SampleDealBriefSection() {
   return (
@@ -60,24 +60,24 @@ export function SampleDealBriefSection() {
               </p>
             </div>
 
-            <div className="rounded-xl bg-primary/[0.08] ring-1 ring-primary/20 p-4 md:p-5 flex flex-col gap-2">
+            <div className="rounded-xl bg-primary/[0.08] ring-1 ring-primary/20 p-4 md:p-5 flex flex-col gap-3">
               <div className="text-primary text-xs font-semibold uppercase tracking-wide flex items-center gap-1.5">
-                <Phone className="w-3.5 h-3.5" strokeWidth={2.5} />
-                Owner contact
+                <AlertTriangle className="w-3.5 h-3.5" strokeWidth={2.5} />
+                Distress signals
               </div>
-              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-foreground/90 text-sm md:text-base">
-                <span className="font-semibold">Mike Jones</span>
-                <span className="tabular-nums">(281) 330-8004</span>
-                <span className="text-muted-foreground text-xs md:text-sm">87% confidence</span>
-                <span className="text-muted-foreground text-xs md:text-sm">Email attached</span>
+              <div className="flex flex-wrap gap-2">
+                {["Tax delinquent · 2 yrs", "Absentee owner · 214 mi", "No permits since 2008", "20+ yr hold"].map((signal) => (
+                  <span key={signal} className="px-2.5 py-1 rounded-full bg-primary/10 ring-1 ring-primary/20 text-primary/90 text-xs font-medium">
+                    {signal}
+                  </span>
+                ))}
               </div>
-              <p className="text-muted-foreground text-xs md:text-sm italic">Verify before outreach.</p>
             </div>
           </div>
         </article>
 
         <p className="text-muted-foreground text-sm md:text-base font-medium leading-relaxed text-center max-w-[680px]">
-          Every deal in your inbox reads like this. Distress signals explained. Owner profile. Match rationale. Contact info. Aerial map. Ready to call.
+          Every deal in your inbox reads like this. Distress signals explained. Match rationale. Property profile. Aerial map. Ready to act.
         </p>
       </div>
     </section>

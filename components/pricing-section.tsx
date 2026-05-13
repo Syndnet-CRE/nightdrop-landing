@@ -30,7 +30,7 @@ const pricingPlans: PricingPlan[] = [
       "Add'l buy box +$50/mo",
       "AI-written deal briefs",
       "Distress signals + match threshold",
-      "Skip-traced owner contacts",
+      "Match reasoning + confidence score",
       "Cancel anytime",
     ],
     trial: "3-day free trial · 3 buy boxes · 15 deals",

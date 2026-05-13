@@ -29,9 +29,9 @@ const rows: ComparisonRow[] = [
     oldWay: "Manual every single time",
   },
   {
-    need: "Skip-traced contacts included",
-    nightdrop: "In every brief",
-    oldWay: "Separate step, extra cost",
+    need: "Deal brief written up per match",
+    nightdrop: "Included with every match",
+    oldWay: "Raw spreadsheet rows, no analysis",
   },
   {
     need: "No hiring, training, or managing",
@@ -41,7 +41,7 @@ const rows: ComparisonRow[] = [
   {
     need: "Total monthly cost",
     nightdrop: "$149 flat",
-    oldWay: "$99 PropStream + $15/hr VA + skip trace fees",
+    oldWay: "$99 PropStream + $15/hr VA + hours of manual screening",
   },
 ]
 

@@ -12,7 +12,7 @@ const EasyDeployment: React.FC = () => {
     "[02:14:34.945] Scoring matches against criteria",
     "[02:18:30.561] Surfacing distress signals",
     "[02:22:11.880] Resolving owner contacts",
-    "[02:25:30.914] Skip-tracing high-confidence matches",
+    "[02:25:30.914] Scoring distress signals on matched properties",
     "[02:30:00.940] Filtering weak matches",
     "[02:34:36.436] Building deal briefs",
     "[02:35:45.436] Composing email digests",

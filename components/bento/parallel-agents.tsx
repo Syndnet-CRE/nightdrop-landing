@@ -5,25 +5,26 @@ import type React from "react"
 const ParallelCodingAgents: React.FC = () => {
   const contacts = [
     {
-      title: "(512) 555-0142",
-      meta: "Patterson · skip-trace · 94% confidence",
+      title: "Tax delinquent · 2 yrs unpaid",
+      meta: "Patterson · distress signal · high severity",
       icon: (
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-        </svg>
-      ),
-      color: "hsl(var(--foreground))",
-    },
-    {
-      title: "john@patterson-h.com",
-      meta: "Patterson · skip-trace · 88% confidence",
-      icon: (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="2" y="4" width="20" height="16" rx="2" />
-          <path d="m22 7-10 5L2 7" />
+          <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+          <line x1="12" y1="9" x2="12" y2="13" />
+          <line x1="12" y1="17" x2="12.01" y2="17" />
         </svg>
       ),
       color: "#D97706",
+    },
+    {
+      title: "Match score: 9.1 / 10",
+      meta: "Patterson · buy box match · confirmed",
+      icon: (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
+      ),
+      color: "hsl(var(--foreground))",
     },
     {
       title: "4501 Riverside Dr",
@@ -49,7 +50,7 @@ const ParallelCodingAgents: React.FC = () => {
         justifyContent: "center",
       }}
       role="img"
-      aria-label="Owner contact records attached to a deal"
+      aria-label="Distress signals and match score for a matched deal"
     >
       <div
         style={{

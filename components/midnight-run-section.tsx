@@ -58,7 +58,7 @@ const steps: Step[] = [
     idx: 5,
     time: "4:30 AM",
     title: "Briefs written, contacts attached",
-    detail: "AI drafts a full deal brief per property. Skip trace pulled. Owner contact attached.",
+    detail: "AI drafts a full deal brief per property. Distress signals scored. Ready in your inbox by morning.",
     startMin: 271,
     endMin: 361,
   },

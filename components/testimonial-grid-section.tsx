@@ -20,7 +20,7 @@ const testimonials = [
     type: "small-dark",
   },
   {
-    quote: "I was spending 15 hours a week pulling lists and skip tracing. Nightdrop cut that to zero.",
+    quote: "I was spending 15 hours a week pulling lists and screening properties. Nightdrop cut that to zero.",
     name: "Wholesaler",
     company: "Phoenix, AZ",
     avatar: "",
@@ -34,7 +34,7 @@ const testimonials = [
     type: "small-dark",
   },
   {
-    quote: "The owner contact info comes attached to every brief. Name, phone, email. I just make the call.",
+    quote: "The deal brief tells me exactly why a property is distressed and why it hit my buy box. I know the play before I pick up the phone.",
     name: "Private Investor",
     company: "Nashville, TN",
     avatar: "",

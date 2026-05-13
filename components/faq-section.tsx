@@ -8,7 +8,7 @@ const faqData = [
   {
     question: "How is this different from PropStream or BatchLeads?",
     answer:
-      "Those are list tools. You pull, scrub, skip trace, and decide what to call. Nightdrop delivers finished deal briefs to your inbox every morning — already filtered for distress, already scored against your threshold, already skip traced, already written up. The work is done before you wake up.",
+      "Those are list tools. You pull, scrub, and decide what to call. Nightdrop delivers finished deal briefs to your inbox every morning — already filtered for distress, already scored against your threshold, already written up. The work is done before you wake up.",
   },
   {
     question: "What if my market doesn't have enough data?",
@@ -26,9 +26,9 @@ const faqData = [
       "Our pipeline runs every 24 hours. Data provided by Parcyl.ai. Every morning's brief reflects the most current ownership, assessment, and distress data available.",
   },
   {
-    question: "How accurate is the skip trace?",
+    question: "How does Nightdrop score a deal?",
     answer:
-      "Every contact comes with a confidence percentage. We surface phone and email pulled from public-records-grade skip trace data. Verify before outreach. We don't claim 100% — we claim transparent.",
+      "Every property is scored against your buy box criteria and ranked by match confidence. Distress signals — tax delinquency, absentee ownership, vacancy indicators, lien history — are weighted against your threshold. Only properties that clear your bar make the digest.",
   },
   {
     question: "What if I get a deal that's not relevant?",
