@@ -15,7 +15,7 @@ export function SampleDealBriefSection() {
 
         <article className="w-full rounded-2xl border border-white/15 bg-white/[0.04] backdrop-blur-sm shadow-[0_30px_80px_-30px_rgba(0,0,0,0.5)] overflow-hidden">
           <header className="px-6 md:px-8 pt-6 md:pt-8 pb-5 md:pb-6 border-b border-white/10 flex flex-col gap-3">
-            <div className="flex items-start justify-between gap-4 flex-wrap">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4">
               <div className="flex flex-col gap-1.5">
                 <h3 className="text-foreground text-xl md:text-2xl font-semibold leading-tight">
                   4711 Ridgeline Dr

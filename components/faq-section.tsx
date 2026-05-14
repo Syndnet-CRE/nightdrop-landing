@@ -59,7 +59,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }: FAQItemProps) => {
       className={`w-full bg-[rgba(231,236,235,0.08)] shadow-[0px_2px_4px_rgba(0,0,0,0.16)] overflow-hidden rounded-[10px] outline outline-1 outline-border outline-offset-[-1px] transition-all duration-500 ease-out cursor-pointer`}
       onClick={handleClick}
     >
-      <div className="w-full px-5 py-[18px] pr-4 flex justify-between items-center gap-5 text-left transition-all duration-300 ease-out">
+      <div className="w-full px-4 sm:px-5 py-[18px] pr-3 sm:pr-4 flex justify-between items-center gap-4 sm:gap-5 text-left transition-all duration-300 ease-out">
         <div className="flex-1 text-foreground text-base font-medium leading-6 break-words">{question}</div>
         <div className="flex justify-center items-center">
           <ChevronDown
