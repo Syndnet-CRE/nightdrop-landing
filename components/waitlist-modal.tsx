@@ -103,7 +103,7 @@ function AssetTypeDropdown({ selected, onChange }: AssetTypeDropdownProps) {
 
       {open && (
         <div
-          className="absolute z-10 w-full mt-1 rounded-lg overflow-y-auto"
+          className="absolute z-10 w-full mt-1 rounded-lg overflow-y-auto scrollbar-hide"
           style={{ background: '#0D0D0D', border: '1px solid rgba(255,255,255,0.08)', maxHeight: '280px' }}
         >
           {ASSET_TAXONOMY.map(({ group, items }) => {
