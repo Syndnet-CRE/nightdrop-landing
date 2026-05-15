@@ -1,8 +1,8 @@
 'use client'
 
 import * as DialogPrimitive from '@radix-ui/react-dialog'
-import { X, Loader2, CheckCircle2 } from 'lucide-react'
-import { useState, type FormEvent } from 'react'
+import { X, Loader2, CheckCircle2, ChevronDown, Check, Minus } from 'lucide-react'
+import { useState, useRef, useEffect, type FormEvent } from 'react'
 import { useWaitlist } from './waitlist-context'
 
 type FormData = {
@@ -27,10 +27,20 @@ const INITIAL: FormData = {
   agreed: false,
 }
 
-const ASSET_TYPES = [
-  'Single Family', 'Multifamily (2–4)', 'Multifamily (5–20)',
-  'Multifamily (21+)', 'Land', 'Mobile Home Park',
-  'Self-Storage', 'Industrial', 'Retail', 'Mixed-Use',
+const ASSET_TAXONOMY = [
+  { group: 'Multifamily',      items: ['Duplex (2-unit)', 'Triplex / Quad (3-4 unit)', 'Small Apartment (5-20 units)', 'Large Apartment (21-100 units)', 'Major Apartment Community (100+)'] },
+  { group: 'Office',           items: ['Small Office', 'Mid-size Office', 'Large Office', 'Medical Office'] },
+  { group: 'Retail',           items: ['Strip Center', 'Neighborhood Shopping Center', 'Community Shopping Center', 'Power Center', 'NNN / Single-Tenant Retail'] },
+  { group: 'Industrial',       items: ['Warehouse / Distribution', 'Flex Space', 'Manufacturing', 'Data Center'] },
+  { group: 'Self-Storage',     items: ['Self-Storage'] },
+  { group: 'Hospitality',      items: ['Hotel / Motel', 'Resort'] },
+  { group: 'Land',             items: ['Vacant Commercial Land', 'Vacant Residential Land', 'Agricultural Land'] },
+  { group: 'Senior Housing',   items: ['Assisted Living', 'Nursing Home / Memory Care'] },
+  { group: 'Mobile Home Park', items: ['Mobile Home Park'] },
+  { group: 'RV Park',          items: ['RV Park / Campground'] },
+  { group: 'Restaurant',       items: ['Restaurant / Food Service'] },
+  { group: 'Single Family',    items: ['Single Family Residential'] },
+  { group: 'Condo / Townhome', items: ['Condo', 'Townhome'] },
 ]
 
 const TOOLS = [
@@ -47,6 +57,108 @@ const inputStyle = { background: '#0D0D0D', border: '1px solid rgba(255,255,255,
 const inputCls = 'w-full rounded-lg px-3 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:ring-1 focus:ring-[#1DAF29]/60'
 const labelCls = 'block text-xs font-medium text-white/50 mb-1.5'
 
+type AssetTypeDropdownProps = {
+  selected: string[]
+  onChange: (types: string[]) => void
+}
+
+function AssetTypeDropdown({ selected, onChange }: AssetTypeDropdownProps) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function handleOutside(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    if (open) document.addEventListener('mousedown', handleOutside)
+    return () => document.removeEventListener('mousedown', handleOutside)
+  }, [open])
+
+  function toggleItem(item: string) {
+    onChange(selected.includes(item) ? selected.filter(t => t !== item) : [...selected, item])
+  }
+
+  function toggleGroup(items: string[]) {
+    const allSelected = items.every(i => selected.includes(i))
+    onChange(allSelected ? selected.filter(t => !items.includes(t)) : [...selected, ...items.filter(i => !selected.includes(i))])
+  }
+
+  const label = selected.length === 0
+    ? 'Select asset types'
+    : selected.length <= 2
+      ? selected.join(', ')
+      : `${selected.slice(0, 2).join(', ')} +${selected.length - 2} more`
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen(o => !o)}
+        className={`${inputCls} flex items-center justify-between`}
+        style={inputStyle}
+      >
+        <span className={selected.length === 0 ? 'text-white/30' : 'text-white truncate pr-2'}>{label}</span>
+        <ChevronDown className={`w-4 h-4 text-white/40 shrink-0 transition-transform ${open ? 'rotate-180' : ''}`} />
+      </button>
+
+      {open && (
+        <div
+          className="absolute z-10 w-full mt-1 rounded-lg overflow-y-auto"
+          style={{ background: '#0D0D0D', border: '1px solid rgba(255,255,255,0.08)', maxHeight: '280px' }}
+        >
+          {ASSET_TAXONOMY.map(({ group, items }) => {
+            const allSelected = items.every(i => selected.includes(i))
+            const someSelected = items.some(i => selected.includes(i))
+            return (
+              <div key={group}>
+                <button
+                  type="button"
+                  onClick={() => toggleGroup(items)}
+                  className="w-full flex items-center justify-between px-3 py-2 hover:bg-white/5 transition-colors"
+                >
+                  <span className="text-xs font-semibold uppercase tracking-wider text-white/60">{group}</span>
+                  <div
+                    className="w-4 h-4 rounded flex items-center justify-center border shrink-0"
+                    style={{
+                      background: allSelected ? '#1DAF29' : someSelected ? 'rgba(29,175,41,0.3)' : 'transparent',
+                      borderColor: allSelected || someSelected ? '#1DAF29' : 'rgba(255,255,255,0.2)',
+                    }}
+                  >
+                    {allSelected && <Check className="w-3 h-3 text-black" />}
+                    {someSelected && !allSelected && <Minus className="w-3 h-3 text-[#1DAF29]" />}
+                  </div>
+                </button>
+                {items.map(item => {
+                  const checked = selected.includes(item)
+                  return (
+                    <button
+                      key={item}
+                      type="button"
+                      onClick={() => toggleItem(item)}
+                      className="w-full flex items-center gap-3 pl-6 pr-3 py-1.5 hover:bg-white/5 transition-colors"
+                    >
+                      <div
+                        className="w-3.5 h-3.5 rounded border flex items-center justify-center shrink-0"
+                        style={{
+                          background: checked ? '#1DAF29' : 'transparent',
+                          borderColor: checked ? '#1DAF29' : 'rgba(255,255,255,0.2)',
+                        }}
+                      >
+                        {checked && <Check className="w-2.5 h-2.5 text-black" />}
+                      </div>
+                      <span className="text-sm text-white/70 text-left">{item}</span>
+                    </button>
+                  )
+                })}
+              </div>
+            )
+          })}
+        </div>
+      )}
+    </div>
+  )
+}
+
 export function WaitlistModal() {
   const { open, closeWaitlist } = useWaitlist()
   const [form, setForm] = useState<FormData>(INITIAL)
@@ -55,14 +167,6 @@ export function WaitlistModal() {
 
   const set = (field: keyof FormData, value: string | boolean) =>
     setForm(prev => ({ ...prev, [field]: value }))
-
-  const toggleAssetType = (type: string) =>
-    setForm(prev => ({
-      ...prev,
-      assetTypes: prev.assetTypes.includes(type)
-        ? prev.assetTypes.filter(t => t !== type)
-        : [...prev.assetTypes, type],
-    }))
 
   const toggleTool = (tool: string) =>
     setForm(prev => ({
@@ -195,26 +299,10 @@ export function WaitlistModal() {
 
                 <div>
                   <label className={labelCls}>Asset types I buy <span className="text-white/30">(select all that apply)</span></label>
-                  <div className="flex flex-wrap gap-2 mt-1">
-                    {ASSET_TYPES.map(type => {
-                      const selected = form.assetTypes.includes(type)
-                      return (
-                        <button
-                          key={type}
-                          type="button"
-                          onClick={() => toggleAssetType(type)}
-                          className="px-3 py-1.5 rounded-full text-xs font-medium border transition-colors"
-                          style={{
-                            background: selected ? 'rgba(29,175,41,0.15)' : 'rgba(255,255,255,0.04)',
-                            borderColor: selected ? 'rgba(29,175,41,0.5)' : 'rgba(255,255,255,0.08)',
-                            color: selected ? '#1DAF29' : 'rgba(255,255,255,0.5)',
-                          }}
-                        >
-                          {type}
-                        </button>
-                      )
-                    })}
-                  </div>
+                  <AssetTypeDropdown
+                    selected={form.assetTypes}
+                    onChange={types => setForm(prev => ({ ...prev, assetTypes: types }))}
+                  />
                 </div>
 
                 <div>
