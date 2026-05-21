@@ -20,7 +20,7 @@ export function HeroSection() {
   return (
     <section
       className="flex flex-col items-center text-center relative rounded-2xl py-0 px-4
-         w-full h-[600px] md:h-[800px] lg:h-[1010px] md:px-0"
+         w-full min-h-[600px] md:h-[800px] lg:h-[1010px] md:px-0"
     >
       {/* SVG Background */}
       <div className="absolute inset-0 z-0 overflow-hidden rounded-2xl">
@@ -453,7 +453,7 @@ export function HeroSection() {
         <Header />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center gap-4 md:gap-5 lg:gap-6 mb-6 md:mb-7 lg:mb-9 max-w-md md:max-w-[560px] lg:max-w-[680px] mt-16 md:mt-[110px] lg:mt-[140px] px-4">
+      <div className="relative z-10 flex flex-col items-center gap-4 md:gap-5 lg:gap-6 mb-6 md:mb-7 lg:mb-9 max-w-md md:max-w-[560px] lg:max-w-[680px] mt-24 md:mt-[110px] lg:mt-[140px] px-4">
         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 ring-1 ring-white/10 text-foreground/80 text-xs md:text-sm font-medium uppercase tracking-wide">
           We run agents every night · Nationwide
         </span>
@@ -486,10 +486,10 @@ export function HeroSection() {
 
       <div className="relative z-10 w-full max-w-md md:max-w-[560px] lg:max-w-[680px] px-4 mt-4 md:mt-5">
         <div className="flex items-center justify-center gap-1.5 mb-2">
-          <span className="text-primary font-semibold text-base md:text-lg">
+          <span className="text-primary font-semibold text-sm md:text-lg">
             {remaining !== null ? remaining : '—'}
           </span>
-          <span className="text-muted-foreground text-base md:text-lg">of 100 Founding Member spots remaining</span>
+          <span className="text-muted-foreground text-sm md:text-lg">of 100 Founding Member spots remaining</span>
         </div>
         <WaitlistProgressBar progress={remaining !== null ? (100 - remaining) / 100 : 0.08} />
         <p className="text-muted-foreground text-xs mt-2 text-center">
