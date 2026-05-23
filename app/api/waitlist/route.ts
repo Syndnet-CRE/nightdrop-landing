@@ -23,6 +23,7 @@ export async function POST(req: Request) {
         body: JSON.stringify({
           email: body.email,
           full_name: `${body.firstName || ''} ${body.lastName || ''}`.trim(),
+          promo_code: body.promoCode || null,
         }),
       }).catch(() => null)
     : Promise.resolve(null)

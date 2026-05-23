@@ -16,6 +16,7 @@ type FormData = {
   currentTools: string[]
   monthlySpend: string
   howHeard: string
+  promoCode: string
   agreed: boolean
 }
 
@@ -24,6 +25,7 @@ const INITIAL: FormData = {
   persona: '', assetTypes: [], market: '', dealVolume: '',
   currentTools: [], monthlySpend: '',
   howHeard: '',
+  promoCode: '',
   agreed: false,
 }
 
@@ -378,6 +380,17 @@ export function WaitlistModal() {
                       <option key={s} value={s}>{s}</option>
                     ))}
                   </select>
+                </div>
+
+                <div>
+                  <label className={labelCls}>Promo code <span className="text-white/30">(optional)</span></label>
+                  <input
+                    value={form.promoCode}
+                    onChange={e => set('promoCode', e.target.value.toUpperCase())}
+                    placeholder="e.g. HVLG"
+                    className={inputCls}
+                    style={inputStyle}
+                  />
                 </div>
 
                 <label className="flex items-start gap-3 cursor-pointer">
