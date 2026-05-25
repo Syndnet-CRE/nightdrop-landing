@@ -23,7 +23,7 @@ export function HeroSection() {
          w-full min-h-[600px] md:h-[800px] lg:h-[1010px] md:px-0"
     >
       {/* SVG Background */}
-      <div className="absolute inset-0 z-0 overflow-hidden rounded-2xl">
+      <div className="absolute inset-x-0 top-0 -bottom-[140px] z-0 overflow-hidden rounded-2xl">
         <svg
           width="100%"
           height="100%"

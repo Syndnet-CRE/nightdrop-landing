@@ -1,4 +1,4 @@
-export function DashboardPreview() {
+export function BuyBoxPreview() {
   return (
     <div className="w-full md:w-[1100px] mx-auto">
       <div className="relative">
@@ -9,8 +9,8 @@ export function DashboardPreview() {
         {/* Image — transparent SVG zones cropped flush so all four gaps are uniform */}
         <div className="relative overflow-hidden rounded-2xl">
           <img
-            src="/images/dashboard-preview.svg"
-            alt="Dashboard preview"
+            src="/images/buy-box-preview.svg"
+            alt="Nightdrop buy box setup: configuring your match threshold for tighter or looser deal filtering"
             className="block w-full h-auto -mt-8 -mb-8 md:-mt-20 md:-mb-20"
           />
         </div>

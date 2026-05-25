@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/hero-section"
 import { DashboardPreview } from "@/components/dashboard-preview"
+import { BuyBoxPreview } from "@/components/buy-box-preview"
 import { VsOldWaySection } from "@/components/vs-old-way-section"
 import { BentoSection } from "@/components/bento-section"
 import { MidnightRunSection } from "@/components/midnight-run-section"
@@ -28,6 +29,9 @@ export default function LandingPage() {
         </main>
         <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto mt-[300px] sm:mt-[320px] md:mt-[420px] lg:mt-[460px]" delay={0.15}>
           <VsOldWaySection />
+        </AnimatedSection>
+        <AnimatedSection className="relative z-10 max-w-[1320px] mx-auto mt-16" delay={0.2}>
+          <BuyBoxPreview />
         </AnimatedSection>
         <AnimatedSection id="features-section" className="relative z-10 max-w-[1320px] mx-auto mt-16" delay={0.2}>
           <BentoSection />

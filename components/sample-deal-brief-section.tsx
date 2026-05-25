@@ -9,7 +9,7 @@ export function SampleDealBriefSection() {
             What you receive
           </span>
           <h2 className="text-foreground text-4xl md:text-5xl font-semibold leading-tight max-w-[600px]">
-            Not a spreadsheet. A finished decision.
+            More than a <span className="text-primary">spreadsheet</span>. A finished <span className="text-primary">decision</span>.
           </h2>
         </div>
 
