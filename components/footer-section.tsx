@@ -11,9 +11,9 @@ export function FooterSection() {
       {/* Left Section: Logo, Description, Social Links */}
       <div className="flex flex-col justify-start items-start gap-8 p-0 md:p-8">
         <div className="flex gap-3 items-stretch justify-center">
-          <Image src="/logos/nightdrop-logo.png" alt="Nightdrop" width={120} height={44} />
+          <Image src="/logos/nightdrop-logo.png" alt="PropCloud" width={120} height={44} />
         </div>
-        <p className="text-foreground/90 text-sm font-medium leading-[18px] text-left">Off-market deals. Every morning.</p>
+        <p className="text-foreground/90 text-sm font-medium leading-[18px] text-left">Property intelligence. Delivered every morning.</p>
         <div className="flex justify-start items-start gap-3">
           <a href="#" aria-label="Twitter" className="w-4 h-4 flex items-center justify-center">
             <Twitter className="w-full h-full text-muted-foreground" />

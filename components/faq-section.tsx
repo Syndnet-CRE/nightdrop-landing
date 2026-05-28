@@ -8,7 +8,7 @@ const faqData = [
   {
     question: "How is this different from PropStream or BatchLeads?",
     answer:
-      "Those are list tools. You pull, scrub, and decide what to call. Nightdrop delivers finished deal briefs to your inbox every morning — already filtered for distress, already scored against your threshold, already written up. The work is done before you wake up.",
+      "Those are list tools. You pull, scrub, and decide what to call. PropCloud delivers finished deal briefs to your inbox every morning — already filtered for distress, already scored against your threshold, already written up. The work is done before you wake up.",
   },
   {
     question: "What if my market doesn't have enough data?",
@@ -18,15 +18,15 @@ const faqData = [
   {
     question: "Where does the data come from?",
     answer:
-      "Parcyl. It's a unique database because it's not just property data — it's property data enriched with geospatial intelligence. 160 million parcels, approximately 900 data points per property, covering ownership, transaction history, assessment, demographic, and geospatial layers.",
+      "PropCloud's data infrastructure covers 160 million parcels with approximately 900 data points per property — ownership, transaction history, assessment, demographic, and geospatial layers. All of it runs nightly.",
   },
   {
     question: "How fresh is the data?",
     answer:
-      "Our pipeline runs every 24 hours. Data provided by Parcyl.ai. Every morning's brief reflects the most current ownership, assessment, and distress data available.",
+      "Our pipeline runs every 24 hours. Every morning's brief reflects the most current ownership, assessment, and distress data available.",
   },
   {
-    question: "How does Nightdrop score a deal?",
+    question: "How does PropCloud score a deal?",
     answer:
       "Every property is scored against your buy box criteria and ranked by match confidence. Distress signals — tax delinquency, absentee ownership, vacancy indicators, lien history — are weighted against your threshold. Only properties that clear your bar make the digest.",
   },
@@ -104,7 +104,7 @@ export function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="self-stretch text-center text-muted-foreground text-sm font-medium leading-[18.20px] break-words">
-            Everything you need to know about Nightdrop before you get started
+            Everything you need to know about PropCloud before you get started
           </p>
         </div>
       </div>

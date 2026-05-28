@@ -57,7 +57,7 @@ export function VsOldWaySection() {
             <span className="text-red-500">Stop</span> doing the work. <span className="text-primary">Start</span> getting the deals.
           </h2>
           <p className="text-muted-foreground text-base md:text-lg font-medium leading-relaxed max-w-[680px]">
-            PropStream and BatchLeads make you the operator. So does hiring a VA — they're just running the same tools while you pay them, train them, and manage them. Nightdrop eliminates all of that.
+            PropStream and BatchLeads make you the operator. So does hiring a VA — they're just running the same tools while you pay them, train them, and manage them. PropCloud eliminates all of that.
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export function VsOldWaySection() {
                 <Check className="w-4 h-4 mt-0.5 text-primary flex-shrink-0" strokeWidth={2.5} />
                 <div className="flex-1">
                   <div className="mb-0.5">
-                    <Image src="/logos/nightdrop-logo.png" alt="Nightdrop" width={386} height={92} className="h-4 w-auto" />
+                    <Image src="/logos/nightdrop-logo.png" alt="PropCloud" width={386} height={92} className="h-4 w-auto" />
                   </div>
                   <span className="text-foreground/90 text-sm leading-snug">{row.nightdrop}</span>
                 </div>
@@ -100,7 +100,7 @@ export function VsOldWaySection() {
               What you need
             </div>
             <div className="px-4 md:px-6 py-2 font-semibold border-b border-white/10 bg-primary/10 flex items-center">
-              <Image src="/logos/nightdrop-logo.png" alt="Nightdrop" width={386} height={92} className="h-10 w-auto" />
+              <Image src="/logos/nightdrop-logo.png" alt="PropCloud" width={386} height={92} className="h-10 w-auto" />
             </div>
             <div className="px-4 md:px-6 py-4 md:py-5 text-muted-foreground font-medium border-b border-white/10">
               <span className="block">The old way</span>

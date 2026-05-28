@@ -401,7 +401,7 @@ export function WaitlistModal() {
                     className="mt-0.5 shrink-0 accent-[#1DAF29]"
                   />
                   <span className="text-xs text-white/50 leading-relaxed">
-                    I agree to receive email updates from Nightdrop. We'll only reach out when your access is ready.
+                    I agree to receive email updates from PropCloud. We'll only reach out when your access is ready.
                   </span>
                 </label>
 

@@ -10,7 +10,7 @@ export function BuyBoxPreview() {
         <div className="relative overflow-hidden rounded-2xl">
           <img
             src="/images/buy-box-preview.svg"
-            alt="Nightdrop buy box setup: configuring your match threshold for tighter or looser deal filtering"
+            alt="PropCloud buy box setup: configuring your match threshold for tighter or looser deal filtering"
             className="block w-full h-auto -mt-8 -mb-8 md:-mt-20 md:-mb-20"
           />
         </div>

@@ -20,7 +20,7 @@ const testimonials = [
     type: "small-dark",
   },
   {
-    quote: "I was spending 15 hours a week pulling lists and screening properties. Nightdrop cut that to zero.",
+    quote: "I was spending 15 hours a week pulling lists and screening properties. PropCloud cut that to zero.",
     name: "Wholesaler",
     company: "Phoenix, AZ",
     avatar: "",
@@ -34,7 +34,7 @@ const testimonials = [
     type: "small-dark",
   },
   {
-    quote: "Two of the three deals I pursued last quarter came through Nightdrop. I'm not going back to pulling lists manually.",
+    quote: "Two of the three deals I pursued last quarter came through PropCloud. I'm not going back to pulling lists manually.",
     name: "Private Investor",
     company: "Nashville, TN",
     avatar: "",
@@ -49,7 +49,7 @@ const testimonials = [
   },
   {
     quote:
-      "We tried building our own sourcing pipeline internally. It took months and it was never this good. Nightdrop was running in five minutes.",
+      "We tried building our own sourcing pipeline internally. It took months and it was never this good. PropCloud does everything we want out of the box.",
     name: "Real Estate Fund Manager",
     company: "Houston, TX",
     avatar: "",
@@ -181,7 +181,7 @@ export function TestimonialGridSection() {
             Investors who tried it, kept it
           </h2>
           <p className="self-stretch text-center text-muted-foreground text-sm md:text-sm lg:text-base font-medium leading-[18.20px] md:leading-relaxed lg:leading-relaxed">
-            Early access feedback from real estate investors and operators using Nightdrop
+            Early access feedback from real estate investors and operators using PropCloud
           </p>
         </div>
       </div>

@@ -113,7 +113,7 @@ export function CTASection() {
             Tonight's run starts at 2 AM. Submit your buy box before midnight.
           </h2>
           <p className="text-muted-foreground text-sm md:text-base font-medium leading-[18.20px] md:leading-relaxed break-words max-w-2xl">
-            Set your criteria tonight. Your agent runs at 2 AM. Tomorrow morning you'll see exactly what Nightdrop surfaces for your market.
+            Set your criteria tonight. Your agent runs at midnight. Tomorrow morning you'll see exactly what PropCloud surfaces for your market.
           </p>
         </div>
         <div className="flex flex-col items-center gap-3">

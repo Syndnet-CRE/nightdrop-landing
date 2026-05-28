@@ -455,14 +455,14 @@ export function HeroSection() {
 
       <div className="relative z-10 flex flex-col items-center gap-4 md:gap-5 lg:gap-6 mb-6 md:mb-7 lg:mb-9 max-w-md md:max-w-[560px] lg:max-w-[680px] mt-24 md:mt-[110px] lg:mt-[140px] px-4">
         <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 ring-1 ring-white/10 text-foreground/80 text-xs md:text-sm font-medium uppercase tracking-wide">
-          We run agents every night · Nationwide
+          The property intelligence cloud · Nationwide
         </span>
         <h1 className="text-foreground text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-semibold leading-[1.15] md:leading-[1.05] tracking-tight">
           <span className="block sm:whitespace-nowrap">Deploy your</span>
           <span className="block sm:whitespace-nowrap">acquisition agent.</span>
         </h1>
         <p className="text-muted-foreground text-base md:text-lg lg:text-xl font-medium leading-relaxed max-w-xl mx-auto">
-          160M+ parcels scanned every night · matched to your buy box · delivered to your inbox every morning.
+          160M+ parcels. 150B+ data points. Matched to your buy box and delivered to your inbox every morning.
         </p>
 
       </div>

@@ -33,7 +33,7 @@ export function Header() {
         <div className="flex items-center">
           <Image
             src="/logos/nightdrop-logo.png"
-            alt="Nightdrop"
+            alt="PropCloud"
             width={386}
             height={92}
             priority

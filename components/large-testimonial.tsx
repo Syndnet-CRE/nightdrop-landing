@@ -9,7 +9,7 @@ export function LargeTestimonial() {
             <div className="w-full max-w-[1080px] mx-auto px-4 py-4 md:px-8 lg:px-12 md:py-5 lg:py-6 overflow-hidden rounded-[10px] bg-primary border border-primary/40 hover:border-primary/70 shadow-[0px_2px_4px_rgba(0,0,0,0.08)] transition-all duration-500 flex flex-col justify-center items-center gap-4 md:gap-6 lg:gap-8">
               <div className="w-full max-w-[1024px] text-center text-primary-foreground leading-7 sm:leading-8 md:leading-10 lg:leading-[64px] font-medium text-lg sm:text-xl md:text-3xl lg:text-6xl">
                 {
-                  "“I used to spend half my week pulling lists and screening off-market leads. Nightdrop replaced all of that.”"
+                  "“I used to spend half my week pulling lists and screening off-market leads. PropCloud replaced all of that.”"
                 }
               </div>
               <div className="flex justify-start items-center gap-5">
