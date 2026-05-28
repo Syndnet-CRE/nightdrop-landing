@@ -230,8 +230,8 @@ export function WaitlistModal() {
           className="fixed left-1/2 top-1/2 z-50 w-full max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-2xl shadow-2xl data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 max-h-[90vh] flex flex-col overflow-hidden mx-4"
           style={{ background: '#1E1E24' }}
         >
-          <DialogPrimitive.Title className="sr-only">Join the Nightdrop Waitlist</DialogPrimitive.Title>
-          <DialogPrimitive.Description className="sr-only">Fill out this form to request early access to Nightdrop.</DialogPrimitive.Description>
+          <DialogPrimitive.Title className="sr-only">Join the PropCloud Waitlist</DialogPrimitive.Title>
+          <DialogPrimitive.Description className="sr-only">Fill out this form to request early access to PropCloud.</DialogPrimitive.Description>
 
           <div className="flex items-center justify-between px-6 pt-6 pb-4 shrink-0" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
             <div>

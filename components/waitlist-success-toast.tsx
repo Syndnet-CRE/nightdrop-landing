@@ -47,7 +47,7 @@ export function WaitlistSuccessToast() {
           <Mail className="w-4 h-4 shrink-0 mt-0.5" style={{ color: '#1DAF29' }} />
           <p className="text-white/60 text-sm leading-relaxed">
             Check your email for your access token. Add{' '}
-            <span className="text-white/80 font-medium">nightdrop.ai</span>{' '}
+            <span className="text-white/80 font-medium">propcloud.ai</span>{' '}
             to your contacts so it doesn't land in spam.
           </p>
         </div>
