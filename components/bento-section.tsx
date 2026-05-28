@@ -111,7 +111,7 @@ export function BentoSection() {
     {
       title: "We run every night.",
       description:
-        "Our pipeline runs at 2am against 160 million parcels with 900 data points per property, including geospatial, demographic, ownership, transaction, and assessment data.",
+        "Our pipeline runs at 12am against 160 million parcels with 900 data points per property, including geospatial, demographic, ownership, transaction, and assessment data.",
       Component: RealtimeCodingPreviews,
     },
     {

@@ -18,12 +18,12 @@ const EasyDeployment: React.FC = () => {
     "[02:35:45.436] Composing email digests",
     "[02:36:37.265] Saved digest manifest",
     "[02:38:39.076] Notification telemetry",
-    "[02:38:39.137] Nightdrop pipeline 1.0",
+    "[02:38:39.137] PropCloud pipeline 1.0",
     "[02:38:41.439] ✓ Matches scored",
     "[02:38:53.979] ✓ Briefs generated",
     "[05:55:00.585] Queued for delivery",
     "[05:59:50.099] Digest sent to /inbox",
-    "Nightdrop complete. Good morning.",
+    "PropCloud complete. Good morning.",
   ]
 
   return (
@@ -39,7 +39,7 @@ const EasyDeployment: React.FC = () => {
         background: "transparent",
       }}
       role="img"
-      aria-label="Nightdrop pipeline console output with Read your digest button"
+      aria-label="PropCloud pipeline console output with Read your digest button"
     >
       {/* Console panel */}
       <div

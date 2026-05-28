@@ -32,12 +32,12 @@ export function Header() {
       <div className="w-full flex items-center justify-between relative">
         <div className="flex items-center">
           <Image
-            src="/logos/nightdrop-logo.png"
+            src="/logos/propcloud-header-logo.png"
             alt="PropCloud"
-            width={386}
-            height={92}
+            width={637}
+            height={126}
             priority
-            className="w-[112px] h-auto md:w-[154px]"
+            className="w-[129px] h-auto md:w-[177px]"
           />
         </div>
         <nav className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
